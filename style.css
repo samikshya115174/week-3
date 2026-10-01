@@ -1,0 +1,362 @@
+/* ==============================
+   Global Styles
+   ============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #263238;
+    background-color: #f8fafc;
+}
+
+
+/* ==============================
+   Reusable Container
+   ============================== */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* ==============================
+   Header
+   ============================== */
+
+.site-header {
+    background-color: #17324d;
+    color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header h1 {
+    font-size: 1.6rem;
+}
+
+
+/* ==============================
+   Navigation
+   ============================== */
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-list a:hover {
+    color: #8fd3ff;
+}
+
+
+/* ==============================
+   About Section
+   ============================== */
+
+.about-section {
+    padding: 90px 0;
+    background-color: #eaf4fb;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.about-image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.about-text {
+    max-width: 650px;
+}
+
+.intro {
+    color: #1976a8;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #17324d;
+}
+
+.about-text p {
+    margin-bottom: 12px;
+}
+
+
+/* ==============================
+   General Sections
+   ============================== */
+
+.section {
+    padding: 75px 0;
+}
+
+.section h2 {
+    text-align: center;
+    color: #17324d;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+
+/* ==============================
+   Skills
+   ============================== */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.skill-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-card dt {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1976a8;
+    margin-bottom: 10px;
+}
+
+.skill-card dd {
+    color: #555;
+}
+
+
+/* ==============================
+   Projects
+   ============================== */
+
+.projects-section {
+    background-color: #eaf4fb;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.project-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.project-card h3 {
+    color: #17324d;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    margin-bottom: 15px;
+}
+
+.project-card a {
+    color: #1976a8;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==============================
+   Contact Form
+   ============================== */
+
+.contact-container {
+    max-width: 700px;
+}
+
+.contact-form {
+    background-color: white;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #c8d2da;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: 2px solid #1976a8;
+}
+
+button {
+    background-color: #17324d;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #1976a8;
+}
+
+
+/* ==============================
+   Footer
+   ============================== */
+
+.site-footer {
+    background-color: #17324d;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+}
+
+
+/* ==============================
+   Responsive Design
+   ============================== */
+
+@media (max-width: 768px) {
+
+    .site-header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .about-text h2 {
+        font-size: 2rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ==============================
+   Small Mobile Devices
+   ============================== */
+
+@media (max-width: 480px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .site-header h1 {
+        font-size: 1.3rem;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .about-section {
+        padding: 60px 0;
+    }
+
+    .about-image img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 55px 0;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+}
